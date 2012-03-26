@@ -2,6 +2,14 @@ package seek;
 
 import java.util.Date;
 
+/**
+ * 
+ * Tournament Class
+ * 
+ * @author Bronte
+ *
+ */
+
 public class C_Tournament {
     
     private long m_id; 
@@ -60,10 +68,41 @@ public class C_Tournament {
         m_zeekRun = zeekRun;
     }
     
+    public String getStatus() {
+        return m_status;
+    }
+
+    public String getRegions() {
+        return m_regions;
+    }
+
+    public String getLcation() {
+        return m_location;
+    }
+
+    public String getGameName() {
+        return m_gameName;
+    }
+
+    public String getGameNameShort() {
+        return m_gameNameShort;
+    }
+
+    public String getJsEmbed() {
+        return m_jsEmbed;
+    }
+
+    public String getIframeEmbed() {
+        return m_iframeEmbed;
+    }
+
+    public boolean isZeekRun() {
+        return m_zeekRun;
+    }
+
     public long getPlayersActiveRegistered() {
         return m_playersActiveRegistered;
     }
-
 
     public long getMaxSize() {
         return m_maxSize;
@@ -93,6 +132,11 @@ public class C_Tournament {
         return m_start;
     }
     
+    /**
+     * Parses the iframe code and extracts the tournament url
+     * 
+     * @return tournament url
+     */
     public String getSingleUrl() {
         String url;
         int end;
