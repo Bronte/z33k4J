@@ -45,7 +45,7 @@ public class C_Example {
             System.out.println();
         }
         
-        // print some group details, they should be cashed
+        // print some group details, they should be cached
         C_Group group = lib.getGroup();
         System.out.println( "GroupName: " + group.getName() );
         System.out.println( "Website: " + group.getWebsite() );

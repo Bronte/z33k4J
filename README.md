@@ -23,7 +23,7 @@ TimeZone tz = TimeZone.getTimeZone( "Europe/Berlin" );
 dateFormat.setTimeZone( tz );
 
 // init the lib with a group url and a caching time of 5 minutes (5 * 60 * 1000)
-// the cashing time specifies how long the lib will wait to refresh the data
+// the caching time specifies how long the lib will wait to refresh the data
 
 C_SeekLib lib = new C_SeekLib( "http://api.z33k.com/v1/groups/starcade.json", 300000 );
 
