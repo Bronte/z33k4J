@@ -9,6 +9,11 @@ http://www.starcade-gaming.org
  - easy access to all data
  - caching of http requests
 
+## Requirements
+
+json-simple V1.1.1: http://code.google.com/p/json-simple/downloads/list
+
+
 # Quick Example (See also src/example/Example.java):
 
 ```java
