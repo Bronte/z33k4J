@@ -7,9 +7,9 @@ import java.util.TimeZone;
 
 import org.json.simple.parser.ParseException;
 
-import seek.C_Group;
-import seek.C_SeekLib;
-import seek.C_Tournament;
+import s33k.C_Group;
+import s33k.C_SeekLib;
+import s33k.C_Tournament;
 
 /**
  * 
