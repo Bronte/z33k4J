@@ -5,9 +5,9 @@ import java.util.LinkedList;
 
 /**
  * 
- * Tournament Class
+ * Tournament data holder class, with a few extra features
  * 
- * @author Bronte
+ * @author Bronte www.starcade-gaming.org
  *
  */
 
@@ -77,6 +77,10 @@ public class C_Tournament {
         return m_regions;
     }
     
+    /**
+     * 
+     * @return All regions as a single String in the format Europe/NA
+     */
     public String getRegionsAsSingleString() {
         return parseLinkedList( m_regions );
     }
@@ -129,6 +133,10 @@ public class C_Tournament {
         return m_leagues;
     }
     
+    /**
+     * 
+     * @return All leagues as a single String in the format B/S/G/P/D/M/GM
+     */
     public String getLeaguesAsSingleString() {
         return parseLinkedList( m_leagues );
     }
@@ -155,7 +163,7 @@ public class C_Tournament {
         return url;
     }
     
-    public static String parseLinkedList( LinkedList<String> list ) {
+    private static String parseLinkedList( LinkedList<String> list ) {
         StringBuilder res = new StringBuilder();
         
         for( int i = 0; i < list.size(); i++ ) {

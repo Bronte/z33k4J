@@ -5,8 +5,18 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.Map;
 
+/**
+ * 
+ * @author Bronte www.starcade-gaming.org
+ */
 public class C_TournamentParser {
 
+    /**
+     * Parses the json tournament structure
+     * 
+     * @param tournaments
+     * @return An ArrayList of all Tournaments
+     */
     @SuppressWarnings( "unchecked" ) 
     public static ArrayList<C_Tournament> generateTournamentList( LinkedList<Map<Object,Object>> tournaments ) {
         ArrayList<C_Tournament> tournamentList = new ArrayList<C_Tournament>();

@@ -18,9 +18,9 @@ import org.json.simple.parser.ParseException;
 
 /**
  * 
- * Basic lib-class for group-tournament access
+ * Basic lib-class for group and tournament access
  * 
- * @author Bronte
+ * @author Bronte www.starcade-gaming.org
  *
  */
 public class C_SeekLib {

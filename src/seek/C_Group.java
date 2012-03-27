@@ -3,6 +3,12 @@ package seek;
 import java.util.Date;
 import java.util.LinkedList;
 
+/**
+ * Simple data holder
+ * 
+ * @author Bronte www.starcade-gaming.org
+ *
+ */
 
 public class C_Group {
 
