@@ -1,6 +1,7 @@
 package seek;
 
 import java.util.Date;
+import java.util.LinkedList;
 
 /**
  * 
@@ -16,7 +17,7 @@ public class C_Tournament {
     private String m_name; 
     private String m_prize;
 
-    private String m_leagues;
+    private LinkedList<String> m_leagues;
     private String m_gameSize;
     private Date m_start;
     
@@ -24,7 +25,7 @@ public class C_Tournament {
     private long m_maxSize;
     
     private String m_status;
-    private String m_regions;
+    private LinkedList<String> m_regions;
     private String m_location;
     private String m_gameName;
     private String m_gameNameShort;
@@ -37,8 +38,8 @@ public class C_Tournament {
             String name, 
             String prize,
             String status,
-            String regions,
-            String leagues,
+            LinkedList<String> regions,
+            LinkedList<String> leagues,
             String location,
             String gameName,
             String gameNameShort,
@@ -72,8 +73,12 @@ public class C_Tournament {
         return m_status;
     }
 
-    public String getRegions() {
+    public LinkedList<String> getRegions() {
         return m_regions;
+    }
+    
+    public String getRegionsAsSingleString() {
+        return parseLinkedList( m_regions );
     }
 
     public String getLcation() {
@@ -120,8 +125,12 @@ public class C_Tournament {
         return m_prize;
     }
 
-    public String getLeagues() {
+    public LinkedList<String> getLeagues() {
         return m_leagues;
+    }
+    
+    public String getLeaguesAsSingleString() {
+        return parseLinkedList( m_leagues );
     }
 
     public String getGameSize() {
@@ -144,5 +153,16 @@ public class C_Tournament {
         end = url.lastIndexOf( "width" );
         url = url.substring( 0, end - 7 );
         return url;
+    }
+    
+    public static String parseLinkedList( LinkedList<String> list ) {
+        StringBuilder res = new StringBuilder();
+        
+        for( int i = 0; i < list.size(); i++ ) {
+            res.append( list.get( i ).substring( 0, 1 ) );
+            res.append( "/" );
+        }
+        
+        return res.toString();
     }
 }
