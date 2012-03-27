@@ -23,13 +23,13 @@ import org.json.simple.parser.ParseException;
  * @author Bronte www.starcade-gaming.org
  *
  */
-public class C_SeekLib {
+public class C_S33kLib {
     
     private JSONParser m_parser;
     private ContainerFactory m_containerFactory;
     
     private long m_lastRefresh = 0;
-    private long m_cashingTime;
+    private long m_cachingTime;
     private String m_groupUrl;
     
     private LinkedList<Map<Object, Object>> m_pastTournaments;
@@ -38,7 +38,7 @@ public class C_SeekLib {
     
     private Map<Object, Object> m_group;
 
-    public C_SeekLib( String groupUrl, long cashingTime ) {
+    public C_S33kLib( String groupUrl, long cachingTime ) {
         m_parser=new JSONParser();
         
         m_containerFactory = new ContainerFactory(){
@@ -54,7 +54,7 @@ public class C_SeekLib {
                                 
           };
           m_groupUrl = groupUrl;
-          m_cashingTime = cashingTime;
+          m_cachingTime = cachingTime;
     }
     
     public ArrayList<C_Tournament> getUpcomingTournaments() throws ParseException, IOException {
@@ -92,14 +92,14 @@ public class C_SeekLib {
 
     /**
      * Refreshes all tournament types
-     * gets called on each tournament request, refresh is done if current data is older than 5 minutes
+     * gets called on each tournament/group request, refresh is only done if current data is older than 5 minutes
      * 
      * @throws ParseException
      * @throws IOException
      */
     @SuppressWarnings( "unchecked" )
     public void refreshData() throws ParseException, IOException {
-        if( System.currentTimeMillis() - m_lastRefresh > m_cashingTime ) {
+        if( System.currentTimeMillis() - m_lastRefresh > m_cachingTime ) {
             Map<Object, Object> json = (Map<Object, Object>) m_parser.parse( getData( m_groupUrl ), m_containerFactory );
 
             m_group = (Map<Object, Object>) json.get( "group" );

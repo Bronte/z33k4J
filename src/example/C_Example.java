@@ -8,7 +8,7 @@ import java.util.TimeZone;
 import org.json.simple.parser.ParseException;
 
 import s33k.C_Group;
-import s33k.C_SeekLib;
+import s33k.C_S33kLib;
 import s33k.C_Tournament;
 
 /**
@@ -28,7 +28,7 @@ public class C_Example {
         
         // init the lib with a group url and a cashing time of 5 minutes (5 * 60 * 1000)
         // the cashing time specifies how long the lib will wait to refresh the data
-        C_SeekLib lib = new C_SeekLib( "http://api.z33k.com/v1/groups/starcade.json", 300000 );
+        C_S33kLib lib = new C_S33kLib( "http://api.z33k.com/v1/groups/starcade.json", 300000 );
         // get all past tournaments
         ArrayList<C_Tournament> res = lib.getPastTournaments();
         
