@@ -54,3 +54,4 @@ System.out.println( "Created at: " + dateFormat.format( group.getCreatedAt() ) )
 
 # TODO:
  - implement the tournament/bracket api after they got replaced/updated by the z33k developers
+ - auto-generate all access-classes (in case of json, mybe http://jsongen.byingtondesign.com/)
