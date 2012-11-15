@@ -5,6 +5,9 @@ It currently can parse a group (json) and extract all group data, including upco
 
 http://www.starcade-gaming.org
 
+<a href="http://flattr.com/thing/995646/Brontez33k4J-on-GitHub" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+
 ## Features:
  - easy access to all data
  - caching of http requests
